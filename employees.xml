@@ -1,0 +1,46 @@
+<employees>
+
+    <employee>
+        <id>100</id>
+        <first_name>Ali</first_name>
+        <last_name>Mammadov</last_name>
+        <salary>4000</salary>
+    </employee>
+
+    <employee>
+        <id>101</id>
+        <first_name>Vali</first_name>
+        <last_name>Huseynov</last_name>
+        <salary>2509</salary>
+    </employee>
+
+
+    <employee>
+        <id>102</id>
+        <first_name>Elshan</first_name>
+        <last_name>Mammadov</last_name>
+        <salary>4566</salary>
+    </employee>
+
+    <employee>
+        <id>103</id>
+        <first_name>Hafiz</first_name>
+        <last_name>Gasimov</last_name>
+        <salary>7562</salary>
+    </employee>
+
+    <employee>
+        <id>104</id>
+        <first_name>Aydin</first_name>
+        <last_name>Ibrahimov</last_name>
+        <salary>3333</salary>
+    </employee>
+
+    <employee>
+        <id>105</id>
+        <first_name>Elxan</first_name>
+        <last_name>Ahmedov</last_name>
+        <salary>1567</salary>
+    </employee>
+
+</employees>
