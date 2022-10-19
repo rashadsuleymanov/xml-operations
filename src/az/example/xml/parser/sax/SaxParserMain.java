@@ -10,11 +10,11 @@ public class SaxParserMain {
     public static void main(String[] args) {
 
         try {
+            String xml = "employees.xml";
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser parser = factory.newSAXParser();
 
             EmployeeSAXHandler handler = new EmployeeSAXHandler();
-            String xml = "employees.xml";
             parser.parse(xml, handler);
 
             handler.getEmployees().forEach(employee -> System.out.printf("%s %s %s %s\n",
