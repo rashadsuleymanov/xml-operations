@@ -1,13 +1,24 @@
 package az.example.xml.model;
 
+import javax.xml.bind.annotation.*;
 import java.math.*;
 
+@XmlRootElement(name = "employee")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
 
+    @XmlElement
     private long id;
+
+    @XmlElement(name = "first_name")
     private String firstName;
+
+    @XmlElement(name = "last_name")
     private String lastName;
+
+    @XmlElement
     private BigDecimal salary;
+
 
     public Employee() {
         this(0, "", "", BigDecimal.ZERO);

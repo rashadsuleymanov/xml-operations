@@ -1,16 +1,15 @@
 package az.example.xml.generator.stax;
 
-import az.example.xml.model.Employee;
-import az.example.xml.util.EmployeeGenerator;
+import az.example.xml.model.*;
+import az.example.xml.util.*;
 
 import javax.xml.stream.*;
 import java.io.*;
-import java.util.List;
+import java.util.*;
 
 public class StaxGeneratorMain {
 
     public static void main(String[] args) {
-
         try {
             XMLOutputFactory factory = XMLOutputFactory.newFactory();
             XMLStreamWriter writer = factory.createXMLStreamWriter(new FileOutputStream("employees-stax.xml"));
@@ -22,7 +21,6 @@ public class StaxGeneratorMain {
             writer.writeStartElement("employees");
 
             employees.forEach(employee -> {
-
                 try {
                     writer.writeStartElement("employee");
 
@@ -46,7 +44,6 @@ public class StaxGeneratorMain {
                 } catch (XMLStreamException e) {
                     e.printStackTrace();
                 }
-
             });
 
             writer.writeEndElement();
@@ -54,7 +51,6 @@ public class StaxGeneratorMain {
             writer.writeEndDocument();
 
             writer.close();
-
 
         } catch (XMLStreamException | FileNotFoundException e) {
             e.printStackTrace();
