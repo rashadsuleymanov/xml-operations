@@ -13,7 +13,6 @@ public class JAXBGeneratorMain {
     public static void main(String[] args) {
 
         try {
-
             List<Employee> employeess = EmployeeGenerator.generate(100);
             JAXBContext context = JAXBContext.newInstance(Employees.class);
             Marshaller marshaller = context.createMarshaller();
@@ -24,8 +23,5 @@ public class JAXBGeneratorMain {
         } catch (JAXBException | FileNotFoundException e) {
             e.printStackTrace();
         }
-
-
     }
-
 }
