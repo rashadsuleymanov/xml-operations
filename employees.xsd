@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="employees">
+        <xs:complexType>
+            <xs:sequence>
+                <!--Burada maxOccurs="unbounded" demey yani Collection demekdir.Serhed yoxdur ve icersinde istenilen qeder
+                 employee elementi ola biler.maxOccurs="5" demeylede max 5 employee senedi olsun deye bilirik.-->
+                <xs:element maxOccurs="unbounded" name="employee">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!--id yalniz musbet eded olmalidir: positiveInteger-->
+                            <xs:element name="id" type="xs:positiveInteger" />
+                            <xs:element name="first_name" type="xs:string" />
+                            <xs:element name="last_name" type="xs:string" />
+                            <!--Burada minOccurs=0 demek yani null olsada olar demekdir 1 olarsa amma null ola bilmez -->
+                            <xs:element name="salary" minOccurs="0" type="xs:decimal" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

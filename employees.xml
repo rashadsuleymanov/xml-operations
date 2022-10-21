@@ -1,5 +1,4 @@
 <employees>
-
     <employee>
         <id>100</id>
         <first_name>Ali</first_name>
@@ -42,5 +41,4 @@
         <last_name>Ahmedov</last_name>
         <salary>1567</salary>
     </employee>
-
 </employees>
